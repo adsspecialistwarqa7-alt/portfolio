@@ -32,7 +32,7 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
+            ahmed ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
             exercitationem harum, quia nulla temporibus deleniti libero veniam
             vero beatae numquam ducimus illum ab similique ipsam tempore fugit
             quod laudantium debitis.
@@ -72,7 +72,19 @@ const Home = () => {
           animate="show"
           exit="hidden"
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]"
+          className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%] xl:hidden"
+        >
+          <Avatar />
+        </motion.div>
+
+        {/* avatar (mobile, top half) */}
+        <motion.div
+          variants={fadeIn("up", 0.5)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="w-full h-full max-w-[737px] max-h-[678px] absolute top-0 left-0 xl:hidden"
         >
           <Avatar />
         </motion.div>
