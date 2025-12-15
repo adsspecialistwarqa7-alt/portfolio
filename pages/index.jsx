@@ -6,97 +6,9 @@ import { fadeIn } from "../variants";
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 h-full relative xl:h-full">
-      {/* Mobile Layout */}
-      <div className="xl:hidden w-full flex flex-col bg-gradient-to-r from-primary/10 via-black/30 to-black/10 min-h-screen overflow-y-auto">
-        <div className="flex flex-col items-center px-4 pt-8 pb-20">
-          {/* Logo */}
-          <motion.h2
-            variants={fadeIn("down", 0.1)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="text-white font-bold text-2xl mb-6"
-          >
-            ethan <span className="font-light">smith</span>
-          </motion.h2>
-
-          {/* Icons */}
-          <motion.div
-            variants={fadeIn("down", 0.2)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="flex gap-3 mb-12"
-          >
-            <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center">
-              📱
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center">
-              👤
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center">
-              📊
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center">
-              📈
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-accent flex items-center justify-center rounded-full">
-              🔗
-            </a>
-          </motion.div>
-
-          {/* Avatar Image */}
-          <motion.div
-            variants={fadeIn("up", 0.3)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="w-full mb-8"
-          >
-            <Avatar />
-          </motion.div>
-
-          {/* Title */}
-          <motion.h1
-            variants={fadeIn("down", 0.4)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="h1 text-3xl font-bold text-center mb-4"
-          >
-            Transforming Ideas <br /> Into{" "}
-            <span className="text-accent">Digital Reality</span>
-          </motion.h1>
-
-          {/* Subtitle */}
-          <motion.p
-            variants={fadeIn("down", 0.5)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="text-sm text-center mb-8 text-gray-300"
-          >
-            aa ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
-            exercitationem harum, quia nulla temporibus deleniti libero veniam
-            vero beatae numquam ducimus illum ab similique ipsam tempore fugit
-            quod laudantium debitis.
-          </motion.p>
-
-          {/* Button */}
-          <motion.div
-            variants={fadeIn("down", 0.6)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-          >
-            <ProjectsBtn />
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Desktop Layout */}
-      <div className="hidden xl:block w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
+    <div className="bg-primary/60 h-full relative">
+      {/* text */}
+      <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto px-4">
           {/* title */}
           <motion.h1
@@ -109,6 +21,7 @@ const Home = () => {
             Transforming Ideas <br /> Into{" "}
             <span className="text-accent">Digital Reality</span>
           </motion.h1>
+
           {/* subtitle */}
           <motion.p
             variants={fadeIn("down", 0.3)}
@@ -117,11 +30,12 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-base sm:text-lg"
           >
-            aa ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
             exercitationem harum, quia nulla temporibus deleniti libero veniam
             vero beatae numquam ducimus illum ab similique ipsam tempore fugit
             quod laudantium debitis.
           </motion.p>
+
           {/* btn */}
           <div className="flex justify-center xl:hidden relative mb-10">
             <ProjectsBtn />
@@ -137,16 +51,31 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
+
       {/* image */}
-      <div className="hidden xl:block w-full h-full xl:w-[1280px] xl:h-full absolute right-0 bottom-0">
+      <div className="w-full h-full xl:w-[1280px] xl:h-full absolute right-0 bottom-0">
         {/* bg img */}
         <div
           role="img"
           className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"
           aria-hidden
         />
+
         {/* particles */}
         <ParticlesContainer />
+
+        {/* avatar on mobile (top half) */}
+        <motion.div
+          variants={fadeIn("up", 0.5)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="w-full xl:w-[737px] h-[50%] max-w-[737px] max-h-[678px] absolute top-0 left-0 xl:hidden mt-10"
+        >
+          <Avatar />
+        </motion.div>
+
         {/* avatar on desktop */}
         <motion.div
           variants={fadeIn("up", 0.5)}
