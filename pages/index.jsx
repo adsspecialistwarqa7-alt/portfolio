@@ -64,7 +64,7 @@ const Home = () => {
             exit="hidden"
             className="text-sm text-center mb-8 text-gray-300 leading-relaxed"
           >
-            aa ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
+            STR ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
             exercitationem harum, quia nulla temporibus deleniti libero veniam
             vero beatae numquam ducimus illum ab similique ipsam tempore fugit
             quod laudantium debitis.
