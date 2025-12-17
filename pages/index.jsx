@@ -20,7 +20,7 @@ const Home = () => {
             className="mb-6 text-center"
           >
         <p className="mb-4">Transforming Ideas</p>
-          <motion.div>
+          <motion.div
             variants={fadeIn("down", 0.2)}
             initial="hidden"
             animate="show"
