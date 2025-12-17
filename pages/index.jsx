@@ -30,6 +30,7 @@ const Home = () => {
           >
             
           </motion.div>
+<h2 className="text-white font-bold text-xl"></h2>
 
           {/* Avatar Image */}
           <motion.div
