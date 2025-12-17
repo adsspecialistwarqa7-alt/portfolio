@@ -6,21 +6,20 @@ import { fadeIn } from "../variants";
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 min-h-screen">
+    <div className="bg-primary/60 h-full relative xl:h-full">
       {/* Mobile Layout */}
-      <div className="xl:hidden w-full bg-gradient-to-b from-primary/10 via-black/30 to-black/10">
-        {/* Container with scroll */}
-        <div className="flex flex-col items-center px-4 pt-8 pb-16">
+      <div className="xl:hidden w-full flex flex-col bg-gradient-to-r from-primary/10 via-black/30 to-black/10 min-h-screen overflow-y-auto pb-20">
+        <div className="flex flex-col items-center px-4 pt-6">
           {/* Logo */}
-          <motion.div
+          <motion.h2
             variants={fadeIn("down", 0.1)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="mb-6"
+            className="text-white font-bold text-xl mt-4 mb-4"
           >
-            <h2 className="text-white font-bold text-xl">ethan smith</h2>
-          </motion.div>
+            ethan <span className="font-light">smith.</span>
+          </motion.h2>
 
           {/* Icons */}
           <motion.div
@@ -28,23 +27,26 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="flex gap-4 mb-8"
+            className="flex gap-3 mb-6"
           >
-            <button className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition">
+            <a href="#" className="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-xs">
               📱
-            </button>
-            <button className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition">
-              👤
-            </button>
-            <button className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition">
-              📊
-            </button>
-            <button className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition">
-              📈
-            </button>
-            <button className="w-10 h-10 rounded-full bg-accent flex items-center justify-center transition">
+            </a>
+            <a href="#" className="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-xs">
+              📷
+            </a>
+            <a href="#" className="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-xs">
+              f
+            </a>
+            <a href="#" className="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-xs">
+              ⚙
+            </a>
+            <a href="#" className="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-xs">
+              📌
+            </a>
+            <a href="#" className="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-xs">
               🔗
-            </button>
+            </a>
           </motion.div>
 
           {/* Avatar Image */}
@@ -53,7 +55,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="w-full max-w-sm mb-8"
+            className="w-full max-w-xs mb-6"
           >
             <Avatar />
           </motion.div>
@@ -64,7 +66,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1 text-3xl font-bold text-center mb-4"
+            className="text-2xl font-bold text-center mb-4 leading-tight"
           >
             Transforming Ideas <br /> Into{" "}
             <span className="text-accent">Digital Reality</span>
@@ -76,9 +78,9 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="text-sm text-center mb-8 text-gray-300 leading-relaxed"
+            className="text-xs text-center mb-6 text-gray-400 leading-relaxed"
           >
-            ss ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
+            sssss ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
             exercitationem harum, quia nulla temporibus deleniti libero veniam
             vero beatae numquam ducimus illum ab similique ipsam tempore fugit
             quod laudantium debitis.
@@ -105,7 +107,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1 text-6xl font-bold mb-6"
+            className="h1 text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold mb-6"
           >
             Transforming Ideas <br /> Into{" "}
             <span className="text-accent">Digital Reality</span>
@@ -116,46 +118,49 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-xl mb-16 text-lg"
+            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-base sm:text-lg"
           >
-            aa ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
+            sssss ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
             exercitationem harum, quia nulla temporibus deleniti libero veniam
             vero beatae numquam ducimus illum ab similique ipsam tempore fugit
             quod laudantium debitis.
           </motion.p>
           {/* btn */}
+          <div className="flex justify-center xl:hidden relative mb-10">
+            <ProjectsBtn />
+          </div>
           <motion.div
             variants={fadeIn("down", 0.4)}
             initial="hidden"
             animate="show"
             exit="hidden"
+            className="hidden xl:flex"
           >
             <ProjectsBtn />
           </motion.div>
         </div>
-
-        {/* image */}
-        <div className="w-full h-full xl:w-[1280px] xl:h-full absolute right-0 bottom-0">
-          {/* bg img */}
-          <div
-            role="img"
-            className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"
-            aria-hidden
-          />
-          {/* particles */}
-          <ParticlesContainer />
-          {/* avatar on desktop */}
-          <motion.div
-            variants={fadeIn("up", 0.5)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            transition={{ duration: 1, ease: "easeInOut" }}
-            className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%] mb-16"
-          >
-            <Avatar />
-          </motion.div>
-        </div>
+      </div>
+      {/* image */}
+      <div className="hidden xl:block w-full h-full xl:w-[1280px] xl:h-full absolute right-0 bottom-0">
+        {/* bg img */}
+        <div
+          role="img"
+          className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"
+          aria-hidden
+        />
+        {/* particles */}
+        <ParticlesContainer />
+        {/* avatar on desktop */}
+        <motion.div
+          variants={fadeIn("up", 0.5)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%] xl:flex hidden mb-16"
+        >
+          <Avatar />
+        </motion.div>
       </div>
     </div>
   );
