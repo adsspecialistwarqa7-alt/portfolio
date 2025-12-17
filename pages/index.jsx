@@ -30,7 +30,6 @@ const Home = () => {
             
           </motion.div>
 
-Transforming Ideas <br /> Into{" "}
           {/* Avatar Image */}
           <motion.div
             variants={fadeIn("up", 0.3)}
