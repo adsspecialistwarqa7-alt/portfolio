@@ -19,8 +19,7 @@ const Home = () => {
             exit="hidden"
             className="mb-6 text-center"
           >
-  <h2 className="text-white font-bold text-xl" style={{ paddingBottom: '20px' }}></h2> {/* إضافة padding مباشرة على العنصر */}       
-
+<h2 className="text-white font-bold text-xl"></h2>
           {/* Icons */}
           <motion.div
             variants={fadeIn("down", 0.2)}
