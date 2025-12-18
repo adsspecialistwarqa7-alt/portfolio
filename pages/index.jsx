@@ -8,9 +8,9 @@ const Home = () => {
   return (
     <div className="bg-primary/60 min-h-screen">
       {/* Mobile Layout */}
-      <div className="xl:hidden w-full bg-gradient-to-b from-primary/10 via-black/30 to-black/10">
+      <div className="xl:hidden w-full min-h-screen max-h-screen overflow-y-auto overflow-x-hidden bg-gradient-to-b from-primary/10 via-black/30 to-black/10">
         {/* Container with scroll */}
-        <div className="flex flex-col items-center px-4 pt-8 pb-16">
+        <div className="flex flex-col items-center px-4 pt-8 pb-28">
           {/* Logo */}
           <motion.div
             variants={fadeIn("down", 0.1)}
@@ -39,7 +39,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="w-full max-w-sm mb-8 mt-8 xl:mt-0 xl:mb-0" // Adjust margin for mobile
+            className="w-full max-w-sm mb-8 mt-8 xl:mt-0 xl:mb-0"
           >
             <Avatar />
           </motion.div>
@@ -105,7 +105,7 @@ const Home = () => {
             exit="hidden"
             className="max-w-xl mb-16 text-lg"
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
+            Ahmed ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
             exercitationem harum, quia nulla temporibus deleniti libero veniam
             vero beatae numquam ducimus illum ab similique ipsam tempore fugit
             quod laudantium debitis.
